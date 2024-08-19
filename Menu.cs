@@ -10,7 +10,7 @@ namespace Taller2DVisualStudioSemana1
     {
         public void Execute()
         {
-            Test();
+            E3();
         }
 
         private void Test()
@@ -41,6 +41,42 @@ namespace Taller2DVisualStudioSemana1
                     Console.WriteLine("Toma todo lo que quieras");
                 }
             }
+        }
+
+        private void E1()
+        {
+            int a;
+            int b;
+            Console.WriteLine("Introduce el primer número");
+            a=int.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce el segundo número");
+            b=int.Parse(Console.ReadLine());
+            Console.WriteLine($"Suma: {a + b}");
+            Console.WriteLine($"Resta: {a - b}");
+            Console.WriteLine($"Multiplicación: {a * b}");
+        }
+
+        private void E2()
+        {
+            float a;
+            float b;
+            Console.WriteLine("Introduce el primer número");
+            a = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce el segundo número");
+            b = float.Parse(Console.ReadLine());
+            Console.WriteLine($"División: {a / b}");
+            Console.WriteLine($"Módulo: {a % b}");
+        }
+
+        private void E3()
+        {
+            float days;
+            Console.WriteLine("Introduce la cantidad de días:");
+            days = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"{days} días son {days / 365} años");
+            Console.WriteLine($"{days} días son {days / 7} semanas");
+
         }
     }
 }
