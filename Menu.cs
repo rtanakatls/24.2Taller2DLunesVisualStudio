@@ -8,9 +8,65 @@ namespace Taller2DVisualStudioSemana1
 {
     internal class Menu
     {
+        PersonController personController;
+        public Menu()
+        {
+            personController = new PersonController();
+        }
         public void Execute()
         {
-            E3();
+            ShowPeopleMenu();
+        }
+
+        private void ShowPeopleMenu()
+        {
+            bool continueFlag=true;
+            while (continueFlag)
+            {
+                Console.WriteLine("Introduce la opción a realizar");
+                Console.WriteLine("1. Añadir persona");
+                Console.WriteLine("2. Remover persona");
+                Console.WriteLine("3. Mostrar todas las personas");
+                Console.WriteLine("0. Salir");
+                string option = Console.ReadLine();
+                switch (option)
+                {
+                    case "1":
+                        AddPersonMenu();
+                        break;
+                    case "2":
+                        RemovePersonMenu();
+                        break;
+                    case "3":
+                        ShowAllPeopleMenu();
+                        break;
+                    case "0":
+                        continueFlag = false;
+                        break;
+                }
+            }
+        }
+
+        private void AddPersonMenu()
+        {
+            Console.WriteLine("Introduce el nombre:");
+            string name=Console.ReadLine();
+            Console.WriteLine("Introduce la edad:");
+            int age = int.Parse(Console.ReadLine());
+            personController.AddNewPerson(name, age);
+
+        }
+        private void RemovePersonMenu()
+        {
+            Console.WriteLine("Introduce el nombre:");
+            string name = Console.ReadLine();
+            personController.RemovePerson(name);
+
+        }
+
+        private void ShowAllPeopleMenu()
+        {
+            Console.WriteLine($"{personController.ShowAllPeople()}");
         }
 
         private void Test()
