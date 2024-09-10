@@ -55,6 +55,10 @@
     <Compile Include="RPG\Enemy.cs" />
     <Compile Include="RPG\Game.cs" />
     <Compile Include="RPG\Player.cs" />
+    <Compile Include="Store\Cart.cs" />
+    <Compile Include="Store\ClayProduct.cs" />
+    <Compile Include="Store\ClothProduct.cs" />
+    <Compile Include="Store\StoreMenu.cs" />
     <Compile Include="TLS\Classroom.cs" />
     <Compile Include="TLS\Student.cs" />
     <Compile Include="TLS\TLSMenu.cs" />

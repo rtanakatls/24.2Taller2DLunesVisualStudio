@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Taller2DVisualStudioSemana1.Figures;
 using Taller2DVisualStudioSemana1.RPG;
+using Taller2DVisualStudioSemana1.Store;
 using Taller2DVisualStudioSemana1.TLS;
 
 namespace Taller2DVisualStudioSemana1
@@ -13,7 +14,7 @@ namespace Taller2DVisualStudioSemana1
     {
         static void Main(string[] args)
         {
-            Game menu=new Game();
+            StoreMenu menu=new StoreMenu();
             menu.Execute();
         }
     }
